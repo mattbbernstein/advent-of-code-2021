@@ -1,10 +1,9 @@
 import os, re, mmap
-import numpy as np
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
 DATA_PATH = os.path.abspath(os.path.join(SCRIPT_PATH, '..', 'data'))
 
 def sum_values(match_list: 'list') -> int:
-    return np.sum(list(map(int, match_list)))
+    return sum(list(map(int, match_list)))
 
 def main():
     '''Reads in the specified file of numbers'''
